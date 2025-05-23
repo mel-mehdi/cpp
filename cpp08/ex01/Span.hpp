@@ -5,7 +5,7 @@
 #include <vector>
 #include <algorithm>
 #include <stdexcept>
-
+#include <iostream>
 class Span {
 private:
     unsigned int _maxSize;

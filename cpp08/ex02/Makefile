@@ -1,22 +1,7 @@
-NAME = mutantstack
-CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-
-SRCS = main.cpp
-OBJS = $(SRCS:.cpp=.o)
-
-all: $(NAME)
-
-$(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
-
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
-
+all:
+	c++ -std=c++98 -Wall -Wextra -Werror main.cpp -o mutantstack
 clean:
-	rm -f $(OBJS)
-
+	rm -f mutantstack
 fclean: clean
-	rm -f $(NAME)
 
 re: fclean all
