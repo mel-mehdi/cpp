@@ -9,7 +9,7 @@ int main(int argc, char** argv) {
     std::vector<int> input;
     for (int i = 1; i < argc; ++i) {
         try {
-            int num = std::stoi(argv[i]);
+            int num = std::atoi(argv[i]);
             if (num < 0) throw std::invalid_argument("Negative number");
             input.push_back(num);
         } catch (...) {

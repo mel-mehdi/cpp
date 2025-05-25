@@ -3,23 +3,18 @@
 
 #include <vector>
 #include <deque>
-#include <string>
 #include <iostream>
-#include <sstream>
-#include <algorithm>
-#include <chrono>
-
-
+#include <utility> // for std::pair
+#include <ctime>   // instead of chrono
+#include <cstdlib> // for std::atoi
 class PmergeMe {
 public:
     PmergeMe();
     ~PmergeMe();
-
-    void sortAndMeasure(const std::vector<int>& input);
-
-private:
+    
     void mergeInsertSort(std::vector<int>& container);
     void mergeInsertSort(std::deque<int>& container);
+    void sortAndMeasure(const std::vector<int>& input);
 };
 
 #endif
